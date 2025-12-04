@@ -1,1 +1,2 @@
-# write your code here
+def main:
+    print("Hello")# write your code here
