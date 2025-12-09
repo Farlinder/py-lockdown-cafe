@@ -17,9 +17,9 @@ class Cafe:
             raise NotVaccinatedError("Visitor has no vaccine")
 
         if (
-            visitor["wearing_a_mask"] is False
+            "wearing_a_mask" not in visitor.keys()
+            or visitor["wearing_a_mask"] is False
             or visitor["wearing_a_mask"] is None
-            or "wearing_a_mask" not in visitor.keys()
         ):
             raise NotWearingMaskError("A mask is required")
 
